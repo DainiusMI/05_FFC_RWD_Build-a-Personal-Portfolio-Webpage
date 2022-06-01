@@ -1,0 +1,16 @@
+{
+  "name": "05_ffc_rwd_build-a-personal-portfolio-webpage",
+  "version": "1.0.0",
+  "description": "This project is a part of freeCodeCamp \"Responsive Web Design\" course cetrification project list.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "DainiusMI",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
