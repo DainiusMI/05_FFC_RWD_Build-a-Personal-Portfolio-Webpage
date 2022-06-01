@@ -1,0 +1,127 @@
+
+/* 
+    + Your portfolio should have at least one media query
+    * The height of the welcome section should be equal to the height of the viewport
+    * The navbar should always be at the top of the viewport
+*/
+
+:root {
+    --ws-color:#3D392C;
+    --ws-darker:#211F18;
+    --nb-color:#33CC25;
+    --ps-color:#5E285C;
+    --text-color:white;
+
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+html {
+    font-family: sans-serif;
+    color:var(--text-color);
+
+}
+body {
+   width: 100vw;
+}
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+#navbar {
+    background-color: var(--nb-color);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 3rem;
+}
+#navbar a:hover {
+    background-color: var(--ps-color);
+}
+
+
+#welcome-section, #projects, #contact {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+#welcome-section, #contact {
+    background-color: var(--ws-color);
+}
+#welcome-section p {
+    color: var(--nb-color);
+}
+#projects {
+    height: fit-content;
+    background-color: var(--ps-color);
+    
+}
+.projects-grid {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 500px);
+    gap: 3rem;
+    margin: 4rem 0;
+}
+.project-tile {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+}
+.project-img {
+    height: calc(100% - 4rem);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: zoom-in;
+}
+#invoice_creator {
+    background-image: url(./img/invoice-creator.png);
+}
+#password_generator {
+    background-image: url(./img/password-generator.png);
+}
+#tip_calculator {
+    background-image: url(./img/tip-calculator.png);
+}
+#unit_converter {
+    background-image: url(./img/unit-converter.png);
+}
+.project-caption {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--nb-color);
+    text-align: center;
+}
+.project-caption:hover {
+    background-color: var(--ws-color);
+}
+
+
+/* text formatng */
+
+a {
+    color: var(--text-color);
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding:1rem
+}
+#welcome-section p {
+    font-size: 2.5rem;
+    font-style: italic;
+    font-weight: 100;
+}
+.discription {
+    font-size: 4rem;
+}
