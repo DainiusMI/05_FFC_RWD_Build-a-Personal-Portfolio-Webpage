@@ -22,10 +22,10 @@
 html {
     font-family: sans-serif;
     color:var(--text-color);
-
+    text-align: center;
 }
 body {
-   width: 100vw;
+   width: 100%;
 }
 header {
     position: fixed;
@@ -62,7 +62,7 @@ header {
 #projects {
     height: fit-content;
     background-color: var(--ps-color);
-    
+    padding-top: 4rem;
 }
 .projects-grid {
     width: 60%;
@@ -84,6 +84,7 @@ header {
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     cursor: zoom-in;
 }
 #invoice_creator {
@@ -102,11 +103,15 @@ header {
     width: 100%;
     height: 4rem;
     background-color: var(--nb-color);
-    text-align: center;
 }
 .project-caption:hover {
     background-color: var(--ws-color);
 }
+hr {
+    width: 80%;
+    border-bottom: 2px solid var(--text-color);
+}
+
 
 
 /* text formatng */
@@ -124,4 +129,33 @@ a {
 }
 .discription {
     font-size: 4rem;
+}
+
+/* media */
+@media (max-width:660px) {
+    /* text */ 
+    .discription {
+        font-size: 3rem;
+    }
+    .project-caption {
+        font-size: 1.2rem;
+        height: 2rem;
+        padding: .4rem;
+    }
+    #projects {
+        width: 100%;
+        padding-top: 2rem;
+    }
+    .project-tile {
+
+    }
+    .project-img {
+        height:calc(100% - 2rem);
+    }
+    /* layout */
+    .projects-grid {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(4, 440px);
+        margin: 1rem 0 4rem 0;
+    }
 }
